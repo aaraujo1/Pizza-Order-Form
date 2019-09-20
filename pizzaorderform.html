@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Bueno Pizza</title>
+        <link rel="stylesheet" href="pizzaorderform.css">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    </head>
+    <body>
+	    <main><div id="outer">
+        <header>
+<!-- 	        <h1>Bueno Pizza</h1> -->
+			
+        </header>
+        <img src="bueno_pizza_logo.png" alt="Bueno Pizza" width="400px" class="logo">
+	        <div id="tab-container" class="tab-container">
+	            <ul class="etabs">
+<!-- 					add class disable on tab 2 and 3 with css to disable pointer events -->
+					<li class="tab"><a href="#tab1" id="tab1tab">Choose Your Pizza</a></li>
+	                <li class="tab"><a href="#tab2" class="disable" id="tab2tab">Delivery Information</a></li>
+	                <li class="tab"><a href="#tab3" class="disable" id="tab3tab">Checkout</a></li>
+	                
+	            </ul>
+	            <div class="panel-container">
+	                <div id="tab1">
+		                <form action="javascript:void(0)">
+			                <fieldset id="size">
+				                <legend>Pizza Size</legend>
+				                <input type="radio" name="pizzaSize" value="7" id="smallPizza" required><label for="smallPizza"> Small - $7</label><br>
+				                <input type="radio" name="pizzaSize" value="9" id="mediumPizza"><label for="mediumPizza"> Medium - $9</label><br>
+				                <input type="radio" name="pizzaSize" value="12" id="largePizza"><label for="smallPizza"> Large - $12</label>
+			                </fieldset>
+			                <fieldset id="crust">
+				                <legend>Crust Type</legend>
+				                <input type="radio" name="pizzaCrust" value="thinCrust" id="thinCrust" required><label for="thinCrust"> Thin Crust</label><br>
+				                <input type="radio" name="pizzaCrust" value="panCrust" id="panCrust"><label for="panCrust"> Pan Crust</label><br>
+				                <input type="radio" name="pizzaCrust" value="gfCrust" id="gfCrust"><label for="gfCrust"> Gluten-Free Crust</label>
+			                </fieldset>
+			                <fieldset id="meat">
+				                <legend> Meat Options ($1.50 Each)</legend>
+				                <input type="checkbox" name="pepperoni" value="pepperoni" id="pepperoni"><label for="pepperoni"> Pepperoni</label><br>
+				                <input type="checkbox" name="sausage" value="sausage" id="sausage"><label for="sausage"> Sausage</label><br>
+				                <input type="checkbox" name="ham" value="ham" id="ham"><label for="ham"> Ham</label>
+			                </fieldset>
+			                <fieldset id="vegetable">
+				                <legend>Vegetable Options ($1.00 each)</legend>
+				                <input type="checkbox" name="jalapeno" value="jalapeno" id="jalapeno"><label for="jalapeno"> Jalapeño Peppers</label><br>
+				                <input type="checkbox" name="tomato" value="tomato" id="tomato"><label for="tomato"> Roma Tomatoes</label><br>
+				                <input type="checkbox" name="onion" value="onion" id="onion"><label for="onion"> Red Onions</label><br>
+				                <input type="checkbox" name="spinach" value="spinach" id="spinach"><label for="spinach"> Spinach</label><br>
+				                <input type="checkbox" name="pineapple" value="pineapple" id="pineapple"><label for="pineapple"> Pineapple</label>
+			                </fieldset>
+			                <div class="buttonNav">
+			                <button type="submit" id="submitPizza">Next »</button>
+			                </div>
+		                </form>
+<!-- 		                <a href="#tab2">Next Page »</a> -->
+	                </div>
+	                <div id="tab2">
+		                <form action="javascript:void(0)">
+		                    <label for="name"><span class="subheader">Name: </span></label><input type="text" name="name" id="name" required><br>
+		                    <fieldset id="address">
+			                    <legend>Address</legend>
+			                    	<label for="street">Street: </label><input type="text" name="street" id="street" required><br>
+			                    	<label for="city">City: </label><input type="text" name="city" id="city" required>
+			                    	<label for="state">State: </label><input type="text" name="state" id="state" required><br>
+			                    	<label for="zip">Zip: </label><input type="text" name="zip" id="zip" required><br>
+		                    	</fieldset>
+<!-- 		                  Phone pattern:  \d{3}[\-]\d{3}[\-]\d{4} -->
+		                    <label for="phone"><span class="subheader">Phone: </span></label><input type="tel" name="phone" id="phone" required><br>
+		                    <div class="buttonNav">
+		                    	<button type="button" id="backToPizza">« Back</button>
+								<button type="submit" id="submitDelivery">Next »</button>
+		                    </div>
+<!-- 		                    <a href="#tab1">« Prev Page</a> -->
+<!-- 		                    <a href="#tab3">Next Page »</a> -->
+		                </form>
+	                </div>
+	                <div id="tab3">
+		                <fieldset>
+			                <legend>Pizza Details</legend>
+	                    	<div id="pizzaDetails"></div>
+							<div id="toppings"><span id="toppingsTrue"></span><ul></ul></div>
+		                </fieldset>
+		                <fieldset>
+			                <legend>Delivery Details</legend>
+	                    <div id="deliveryDetails"></div>
+		                </fieldset>
+		                <fieldset>
+			                <legend>Total</legend>
+                        <div id="price">
+	                        <span id="subtotal"></span><br>
+	                        <span id="tax"></span><br>
+	                        Delivery: $2.00<br>
+	                        <hr><b><span id="totalPrice"></b></span>
+	                    </div>
+		                </fieldset>
+                       <div class="thankYou">Thank you for your order!</div> 
+                        <div class="buttonNav">
+		                    	<button type="submit" id="backToDelivery">« Back</button>
+		                </div>
+	                </div>
+	            </div>
+	        </div>
+        </main>
+        <footer>
+	        	<span class="footerText">Copyright &copy; 2017 Bueno Pizza <br>
+	        	123 Bueno Hope Rd. Buenos Aires, Argentina</span>
+        </footer>
+        </div>
+        <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="jspkg-archive/vendor/jquery.hashchange.min.js"></script>
+        <script src="jspkg-archive/lib/jquery.easytabs.min.js"></script>
+        <script src="pizzaorderform.js"></script>
+    </body>
+</html>

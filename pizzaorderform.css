@@ -1,0 +1,156 @@
+/* CSS Styles for easy tabs */
+.etabs { 
+    margin: 0; 
+    padding: 0;
+    text-align: center; 
+}
+
+.tab { 
+	display: inline-block; 
+	zoom:1; *display:inline; 
+	background: #eee; 
+	border: solid 1px #999; 
+	border-bottom: none; 
+	-moz-border-radius: 4px 4px 0 0; 
+	-webkit-border-radius: 4px 4px 0 0; 
+	background-color: rgb(230, 220, 190);
+}
+
+.tab a { 
+    color: rgb(120, 30, 25);  
+    text-decoration: none; 
+    font-size: 14px; 
+    line-height: 2em; 
+    display: block; 
+    padding: 0 10px; 
+    outline: none; 
+    font-size: 1.75em;
+	font-family: 'Lobster', cursive; 
+}
+
+.tab a:hover { 
+/*    text-decoration: underline; */
+    color: rgb(164, 52, 47); 
+}
+
+.tab.active { 
+	background: #fff; 
+	padding-top: 6px; 
+	position: relative; 
+	top: 1px; 
+	border-color: #666; 
+	background-color: rgb(250, 245, 225);
+	
+
+}
+
+.tab a.active { 
+	color: rgb(164, 52, 47); 
+}
+
+
+.tab-container .panel-container { 
+	background: #fff; 
+	border: solid #666 1px; 
+	padding: 10px; 
+	-moz-border-radius: 4px 4px 4px 4px; 
+	-webkit-border-radius: 4px 4px 4px 4px;
+	width: 600px;
+	margin-bottom: 60px;
+/* 	 center tabs */
+	margin: 0 auto;
+	background-color: rgb(250, 245, 225);
+}
+
+/* a class called disable on anchor tags makes no pointer events */
+.tab a.disable{
+	pointer-events: none;
+	background-color:#cccccc;
+	color: gray;
+}
+
+
+.buttonNav{text-align: center;}
+
+/* background */
+body{
+	background-image: url(pizza_checkered.png);
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 14px;
+}
+
+.logo{
+	display: block;
+	margin: 10px auto 20px auto;
+}
+
+/* button style */
+button {
+    background-color: rgb(164, 52, 47); 
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    -moz-border-radius: 4px 4px 4px 4px; 
+	-webkit-border-radius: 4px 4px 4px 4px;
+}
+
+/* test styles */
+legend{
+	color: rgb(164, 52, 47);
+	font-weight: bold;
+	font-size: 1.5em;
+	font-family: 'Lobster', cursive; 
+}
+
+.subheader{
+	color: rgb(164, 52, 47);
+	font-weight: bold;
+	font-size: 1.5em;
+	font-family: 'Lobster', cursive; 
+	padding-left: 0.75em;
+}
+
+fieldset{
+	border-width: 2px 0px 0px 0px;
+	border-color: rgb(164, 52, 47);
+	border-style: solid;
+}
+
+/* remove default ul margin */
+ul {
+    margin: 0;
+}
+
+.thankYou{
+	color: rgb(164, 52, 47);
+	font-weight: bold;
+	font-size: 1.5em;
+	font-family: 'Lobster', cursive; 
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+/* footer styles */
+
+footer{
+	text-align: center;
+	background-color:rgb(250, 245, 225);
+	width:500px;
+	height:36px;
+/* 	position:absolute; */
+	bottom:0;
+	left:0;
+	font-size: .75em;
+	font-style: italic;
+	margin: 20px auto;
+	-moz-border-radius: 4px 4px 4px 4px; 
+	-webkit-border-radius: 4px 4px 4px 4px;
+	border: solid #666 1px;
+}
+.footerText{
+	vertical-align: middle;
+}
